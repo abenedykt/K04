@@ -1,6 +1,4 @@
 ﻿using FluentAssertions;
-using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace Pizza
@@ -62,50 +60,10 @@ namespace Pizza
             order.Add(new OrderItem("Arek", 4, "Pepperoni"));
             order.Add(new OrderItem("Mrek", 4, "Hawajska"));
             order.Add(new OrderItem("Mrek", 4, "Kabanosowa"));
-            order.Add(new OrderItem("Mrek", 4, "xxx"));
+            order.Add(new OrderItem("Mrek", 4, "Kebabowa"));
 
             order.IsValid().Should().BeTrue();
         }
 
-    }
-
-    internal class OrderItem
-    {
-        public OrderItem(string name, int pieces, string pizzaName)
-        {
-            Pieces = pieces;
-            PizzaName = pizzaName;
-        }
-
-        public int Pieces { get; }
-        public string PizzaName { get; }
-    }
-
-    internal class Order
-    {
-        private readonly List<OrderItem> _items;
-
-        public Order()
-        {
-            _items = new List<OrderItem>();
-
-        }
-
-        internal void Add(OrderItem orderItem)
-        {
-            _items.Add(orderItem);
-        }
-
-        internal bool IsValid()
-        {
-            return _items.Any() && 
-                    _items.GroupBy(p => p.PizzaName)
-                            .Select(g => new
-                            {
-                                Kind = g.Key,
-                                Pieces = g.Sum(x => x.Pieces)
-                            })
-                            .All(x => x.Pieces % 4 == 0);
-        }
     }
 }
