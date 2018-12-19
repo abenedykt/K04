@@ -10,11 +10,17 @@ namespace fizbaztest
 
         internal string Play(uint x)
         {
-            if (x % 15 == 0) return "FizzBuzz";
-            if (x % 3 == 0) return "Fizz";
-            if (x % 5 == 0) return "Buzz";
-            
-            return x.ToString();
+            switch (x)
+            {
+                case uint b when b % 15 == 0:
+                    return "FizzBuzz";
+                case uint b when b % 3 == 0:
+                    return "Fizz";
+                case uint b when b % 5 == 0:
+                    return "Buzz";
+                default:
+                    return x.ToString();
+            }
         }
     }
 }

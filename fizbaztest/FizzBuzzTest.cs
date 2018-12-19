@@ -16,7 +16,7 @@ namespace fizbaztest
 
         [Theory, InlineData(1, "1"), InlineData(2, "2"), InlineData(3, "Fizz"), InlineData(5, "Buzz"), InlineData(15, "FizzBuzz")]
 
-        public void Returns_values_according_to_Fixx_Buzz_game_rules(uint input, string expected)
+        public void Returns_values_according_to_Fizz_Buzz_game_rules(uint input, string expected)
         {
             //act
             var result = act(input);
