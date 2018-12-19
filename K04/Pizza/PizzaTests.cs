@@ -56,6 +56,17 @@ namespace Pizza
             order.IsValid().Should().BeFalse();
         }
 
+        [Fact]
+        public void Order_with_two_uneven_halves_of_different_pizza_is_not_valid_2()
+        {
+            order.Add(new OrderItem("Arek", 4, "Pepperoni"));
+            order.Add(new OrderItem("Mrek", 4, "Hawajska"));
+            order.Add(new OrderItem("Mrek", 4, "Kabanosowa"));
+            order.Add(new OrderItem("Mrek", 4, "xxx"));
+
+            order.IsValid().Should().BeTrue();
+        }
+
     }
 
     internal class OrderItem
