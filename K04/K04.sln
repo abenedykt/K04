@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.FizzBuzzGameTests", "Fizz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza", "Pizza\Pizza.csproj", "{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaTests", "PizzaTests\PizzaTests.csproj", "{831F9C7E-6127-43B6-9321-B9CECE7D842C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{831F9C7E-6127-43B6-9321-B9CECE7D842C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{831F9C7E-6127-43B6-9321-B9CECE7D842C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{831F9C7E-6127-43B6-9321-B9CECE7D842C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{831F9C7E-6127-43B6-9321-B9CECE7D842C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

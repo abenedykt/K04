@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Pizza
 {
-    internal class Order
+    public class Order
     {
         private readonly List<OrderItem> _items;
 
@@ -13,12 +13,12 @@ namespace Pizza
 
         }
 
-        internal void Add(OrderItem orderItem)
+        public void Add(OrderItem orderItem)
         {
             _items.Add(orderItem);
         }
 
-        internal bool IsValid()
+        public bool IsValid()
         {
             return _items.Any() && 
                     _items.GroupBy(p => p.PizzaName)

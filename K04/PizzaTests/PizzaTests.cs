@@ -18,7 +18,7 @@ namespace Pizza
             order.IsValid()
                 .Should().BeFalse();
         }
-
+      
         [Fact]
         public void Order_with_one_whole_pizza_is_valid()
         {
