@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Pizza
 {
-    public class Order
+    public class Order : IOrder
     {
         private readonly List<OrderItem> _items;
 
@@ -12,6 +12,8 @@ namespace Pizza
             _items = new List<OrderItem>();
 
         }
+
+        public IEnumerable<IOrderItem> Positions => _items;
 
         public void Add(OrderItem orderItem)
         {

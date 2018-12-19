@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    public class OrderItem
+    public class OrderItem : IOrderItem
     {
         public OrderItem(string name, int pieces, string pizzaName)
         {

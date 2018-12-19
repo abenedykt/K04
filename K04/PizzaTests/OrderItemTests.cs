@@ -1,6 +1,4 @@
-﻿using FluentAssertions;
-using System;
-using Xunit;
+﻿using Xunit;
 
 namespace Pizza
 {
@@ -9,8 +7,7 @@ namespace Pizza
         [Fact]
         public void OrderItem_pieces_must_be_greater_than_zero()
         {
-            Action x = () => new OrderItem("Jan", 0, "whatever");
-            x.Should().Throw<PiecesMustBeGreatherThanZeroException>();
+            Assert.Throws<PiecesMustBeGreatherThanZeroException>(() => new OrderItem("Jan", 0, "whatever"));
         }
     }
 }
