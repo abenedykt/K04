@@ -21,7 +21,7 @@ namespace FizzBuzzTests
         InlineData(5,"Buzz"),
         InlineData(15,"FizzBuzz")
             ]
-        public void When_play_1_returns_1(int input, string expected)
+        public void Return_values_according_to_Fizz_Buzz_game_rules(int input, string expected)
         {
             var result = _act(input);
 
