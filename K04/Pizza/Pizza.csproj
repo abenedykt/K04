@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props')" />
   <Import Project="..\packages\xunit.core.2.4.1\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.4.1\build\xunit.core.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD6C1215-18CF-449C-AC20-FD7F0B81B38E}</ProjectGuid>
+    <ProjectGuid>{E491DC33-5E37-4B3F-A05D-86801D116B9A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FizzBuzzTests</RootNamespace>
-    <AssemblyName>FizzBuzzTests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>Pizza</RootNamespace>
+    <AssemblyName>Pizza</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -36,13 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FluentAssertions, Version=5.5.3.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentAssertions.5.5.3\lib\net45\FluentAssertions.dll</HintPath>
+      <HintPath>..\packages\FluentAssertions.5.5.3\lib\net47\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,8 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FizzBuzzGame.cs" />
-    <Compile Include="FizzBuzzGameTests.cs" />
+    <Compile Include="PizzaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,7 +75,6 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\xunit.core.2.4.1\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.1\build\xunit.core.props'))" />
     <Error Condition="!Exists('..\packages\xunit.core.2.4.1\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.1\build\xunit.core.targets'))" />
-    <Error Condition="!Exists('..\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.visualstudio.2.4.1\build\net20\xunit.runner.visualstudio.props'))" />
   </Target>
   <Import Project="..\packages\xunit.core.2.4.1\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.4.1\build\xunit.core.targets')" />
 </Project>
