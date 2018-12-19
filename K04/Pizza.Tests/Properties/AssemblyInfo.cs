@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Pizza")]
+[assembly: AssemblyTitle("Pizza.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("KMD A/S")]
-[assembly: AssemblyProduct("Pizza")]
+[assembly: AssemblyProduct("Pizza.Tests")]
 [assembly: AssemblyCopyright("Copyright © KMD A/S 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e491dc33-5e37-4b3f-a05d-86801d116b9a")]
+[assembly: Guid("7350831a-c7b7-4162-b08d-c88e566f44b7")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,5 +34,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: InternalsVisibleTo("Pizza.Tests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]

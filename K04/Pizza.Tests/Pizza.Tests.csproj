@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E491DC33-5E37-4B3F-A05D-86801D116B9A}</ProjectGuid>
+    <ProjectGuid>{7350831A-C7B7-4162-B08D-C88E566F44B7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pizza</RootNamespace>
-    <AssemblyName>Pizza</AssemblyName>
+    <RootNamespace>Pizza.Tests</RootNamespace>
+    <AssemblyName>Pizza.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -69,9 +69,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOrder.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderItem.cs" />
+    <Compile Include="OrderCostTests.cs" />
+    <Compile Include="OrderItemTests.cs" />
+    <Compile Include="OrderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pizza\Pizza.csproj">
+      <Project>{E491DC33-5E37-4B3F-A05D-86801D116B9A}</Project>
+      <Name>Pizza</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

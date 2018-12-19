@@ -1,15 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Xunit;
 
-namespace Pizza
+namespace Pizza.Tests
 {
-    public class PizzaTests
+    public class OrderTests
     {
         private Order order;
 
-        public PizzaTests()
+        public OrderTests()
         {
             order = new Order();
         }
@@ -51,46 +49,6 @@ namespace Pizza
             order.Add(new OrderItem("Marek", 2, "Hawai"));
 
             order.IsValid().Should().BeFalse();
-        }
-    }
-
-    public class OrderItem
-    {
-        public string Name { get; }
-        public int Pieces { get; }
-        public string PizzaName { get; }
-
-        public OrderItem(string name, int pieces, string pizzaName)
-        {
-            Name = name;
-            Pieces = pieces;
-            PizzaName = pizzaName;
-        }
-    }
-
-    public class Order
-    {
-        public Order()
-        {
-            OrderItems = new List<OrderItem>();
-        }
-
-        private List<OrderItem> OrderItems { get; }
-
-        public void Add(OrderItem orderItem)
-        {
-            OrderItems.Add(orderItem);
-        }
-
-        public bool IsValid()
-        {
-            if (OrderItems.GroupBy(x => x.PizzaName).Any(pizza => pizza.Select(x => x.Pieces).Sum() % 4 != 0))
-            {
-                return false;
-            }
-
-            var piecesNumber = OrderItems.Select(x => x.Pieces).Sum();
-            return piecesNumber > 0 && piecesNumber % 8 == 0;
         }
     }
 }
