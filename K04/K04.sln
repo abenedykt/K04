@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaiveTestExample", "NaiveTestExample\NaiveTestExample.csproj", "{94BC2AB1-568F-41C4-8B32-A8877102D202}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.NaiveTestExample", "NaiveTestExample\1.NaiveTestExample.csproj", "{94BC2AB1-568F-41C4-8B32-A8877102D202}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzTests", "FizzBuzzTests\FizzBuzzTests.csproj", "{BD6C1215-18CF-449C-AC20-FD7F0B81B38E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.FizzBuzzGameTests", "FizzBuzzTests\2.FizzBuzzGameTests.csproj", "{BD6C1215-18CF-449C-AC20-FD7F0B81B38E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza", "Pizza\Pizza.csproj", "{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BD6C1215-18CF-449C-AC20-FD7F0B81B38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD6C1215-18CF-449C-AC20-FD7F0B81B38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD6C1215-18CF-449C-AC20-FD7F0B81B38E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
