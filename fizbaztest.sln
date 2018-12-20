@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza", "Pizza\Pizza.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaTest", "PizzaTest\PizzaTest.csproj", "{224C0FC1-35EE-4530-86F2-3EAA59F58C02}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PizzaEx", "PizzaEx", "{7366D469-3A77-4911-95F7-DF8DF28A30C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaAbstract", "PizzaEx\PizzaAbstract\PizzaAbstract.csproj", "{9142DCE8-E251-4347-AC0A-A1CA488420AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaApp", "PizzaApp\PizzaApp.csproj", "{DDED8789-2A4D-4063-A837-CE915F8898ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +33,22 @@ Global
 		{224C0FC1-35EE-4530-86F2-3EAA59F58C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{224C0FC1-35EE-4530-86F2-3EAA59F58C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{224C0FC1-35EE-4530-86F2-3EAA59F58C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9142DCE8-E251-4347-AC0A-A1CA488420AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9142DCE8-E251-4347-AC0A-A1CA488420AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9142DCE8-E251-4347-AC0A-A1CA488420AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9142DCE8-E251-4347-AC0A-A1CA488420AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDED8789-2A4D-4063-A837-CE915F8898ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDED8789-2A4D-4063-A837-CE915F8898ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDED8789-2A4D-4063-A837-CE915F8898ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDED8789-2A4D-4063-A837-CE915F8898ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E126570-BDE0-434F-A76E-52FBB335DCE1} = {7366D469-3A77-4911-95F7-DF8DF28A30C0}
+		{224C0FC1-35EE-4530-86F2-3EAA59F58C02} = {7366D469-3A77-4911-95F7-DF8DF28A30C0}
+		{9142DCE8-E251-4347-AC0A-A1CA488420AD} = {7366D469-3A77-4911-95F7-DF8DF28A30C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2DFCC62-4EAF-47C9-8657-CE4FCC5BB470}

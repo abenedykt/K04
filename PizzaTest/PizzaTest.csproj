@@ -73,13 +73,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PappaJonesPizzaFactoryTest.cs" />
+    <Compile Include="Example.cs" />
     <Compile Include="OrderCostTests.cs" />
     <Compile Include="kek.cs" />
     <Compile Include="OrderItemTest.cs" />
-    <Compile Include="PizzaTest.cs" />
+    <Compile Include="OrderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PizzaEx\PizzaAbstract\PizzaAbstract.csproj">
+      <Project>{9142DCE8-E251-4347-AC0A-A1CA488420AD}</Project>
+      <Name>PizzaAbstract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pizza\Pizza.csproj">
       <Project>{2e126570-bde0-434f-a76e-52fbb335dce1}</Project>
       <Name>Pizza</Name>

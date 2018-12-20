@@ -20,7 +20,7 @@ namespace Pizza
 
         public IEnumerable<IOrderItem> Positions { get; }
 
-        public bool isVaild()
+        public bool isValid()
         {
             int sum = 0;
             Dictionary<string, int> hashMap = new Dictionary<string, int>();

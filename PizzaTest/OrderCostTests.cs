@@ -49,7 +49,7 @@ namespace PizzaTest
         }
     }
 
-    public class OrderCalculator
+    public class OrderCalculator : IOrderCalculator
     {
         private readonly IMenu menu;
         public OrderCalculator(IMenu menu)
@@ -75,7 +75,7 @@ namespace PizzaTest
         }
     }
 
-    
+
 
     public class Price : IPrice
     {

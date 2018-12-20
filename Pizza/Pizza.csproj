@@ -87,8 +87,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuItem.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
+    <Compile Include="PappaJones\PappaJonesOrderCalculator.cs" />
+    <Compile Include="PappaJones\PappaJonesMenu.cs" />
+    <Compile Include="PappaJones\PappaJonesPizzaFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +101,13 @@
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaEx\PizzaAbstract\PizzaAbstract.csproj">
+      <Project>{9142dce8-e251-4347-ac0a-a1ca488420ad}</Project>
+      <Name>PizzaAbstract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

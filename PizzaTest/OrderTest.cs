@@ -4,10 +4,10 @@ using Pizza;
 
 namespace PizzaTest
 {
-    public class PizzaTest
+    public class OrderTest
     {
         private Order order;
-        public PizzaTest()
+        public OrderTest()
         {
             order = new Order();
         }
@@ -15,7 +15,7 @@ namespace PizzaTest
         [Fact]
         public void Empty_order_is_not_valid()
         {
-            order.isVaild().Should().BeFalse();
+            order.isValid().Should().BeFalse();
         }
 
         [Fact]
@@ -23,7 +23,7 @@ namespace PizzaTest
         {
             order.Add(new OrderItem("Arek", 8, "pepperoni"));
 
-            order.isVaild().Should().BeTrue();
+            order.isValid().Should().BeTrue();
         }
 
         [Fact]
@@ -31,7 +31,7 @@ namespace PizzaTest
         {
             order.Add(new OrderItem("Arek", 7, "pepperoni"));
 
-            order.isVaild().Should().BeFalse();
+            order.isValid().Should().BeFalse();
         }
 
         [Fact]
@@ -40,7 +40,7 @@ namespace PizzaTest
             order.Add(new OrderItem("Arek", 4, "pepperoni"));
             order.Add(new OrderItem("Arek", 4, "pepperoni"));
 
-            order.isVaild().Should().BeTrue();
+            order.isValid().Should().BeTrue();
         }
 
         [Fact]
@@ -50,7 +50,7 @@ namespace PizzaTest
             order.Add(new OrderItem("Arek2", 4, "pepperoni"));
             order.Add(new OrderItem("Arek3", 4, "pepperoni"));
 
-            order.isVaild().Should().BeFalse();
+            order.isValid().Should().BeFalse();
         }
 
         [Fact]
@@ -59,7 +59,7 @@ namespace PizzaTest
             order.Add(new OrderItem("Arek", 4, "pepperoni"));
             order.Add(new OrderItem("Mirek", 4, "havai"));
 
-            order.isVaild().Should().BeTrue();
+            order.isValid().Should().BeTrue();
         }
 
         [Fact]
@@ -68,7 +68,7 @@ namespace PizzaTest
             order.Add(new OrderItem("Arek", 6, "pepperoni"));
             order.Add(new OrderItem("Mirek", 2, "havai"));
 
-            order.isVaild().Should().BeFalse();
+            order.isValid().Should().BeFalse();
         }
     }
 }
