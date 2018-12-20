@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using NSubstitute;
 using Pizza.Abstract;
+using Pizza.PappaJones;
 using Xunit;
 
 namespace Pizza
@@ -13,7 +14,7 @@ namespace Pizza
             IMenu menu = PrepareTestMenu();
             IOrder order = PrepareTestOrder();
 
-            var calculator = new OrderCalculator(menu);
+            var calculator = new PappaJonesOrderCalculator(menu);
             var price = calculator.Calculate(order);
             price.Value.Should().Be(85);
         }

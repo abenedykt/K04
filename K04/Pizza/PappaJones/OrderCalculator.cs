@@ -1,13 +1,13 @@
 ﻿using Pizza.Abstract;
 using System.Linq;
 
-namespace Pizza
+namespace Pizza.PappaJones
 {
-    public class OrderCalculator
+    public class PappaJonesOrderCalculator : IOrderCalculator
     {
         private readonly IMenu menu;
 
-        public OrderCalculator(IMenu menu)
+        public PappaJonesOrderCalculator(IMenu menu)
         {
             this.menu = menu;
         }

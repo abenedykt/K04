@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Order.cs" />
-    <Compile Include="OrderCalculator.cs" />
+    <Compile Include="PappaJones\OrderCalculator.cs" />
     <Compile Include="OrderItem.cs" />
+    <Compile Include="PappaJones\PappaJonesMenu.cs" />
+    <Compile Include="PappaJones\PappaJonesPizzaFactory.cs" />
     <Compile Include="Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
