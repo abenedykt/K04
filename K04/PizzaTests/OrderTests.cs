@@ -4,11 +4,11 @@ using Xunit;
 
 namespace Pizza
 {
-    public class PizzaTests
+    public class OrderTests
     {
         private IOrder order;
 
-        public PizzaTests()
+        public OrderTests()
         {
             order = new Order();
         }

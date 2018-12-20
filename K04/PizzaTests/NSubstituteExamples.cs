@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Pizza
 {
-    public class NSubstituteTests
+    public class NSubstituteExamples
     {
         [Fact]
         public void Substitue_example_with_same()
