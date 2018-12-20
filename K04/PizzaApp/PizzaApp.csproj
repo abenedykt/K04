@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pizza.Abstract</RootNamespace>
-    <AssemblyName>Pizza.Abstract</AssemblyName>
+    <ProjectGuid>{B59D861C-1F1F-44D6-B4C1-65ED488CA466}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PizzaApp</RootNamespace>
+    <AssemblyName>PizzaApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,16 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IClientOrder.cs" />
-    <Compile Include="IMenu.cs" />
-    <Compile Include="IMenuItem.cs" />
-    <Compile Include="IOrder.cs" />
-    <Compile Include="IOrderCalculator.cs" />
-    <Compile Include="IOrderItem.cs" />
-    <Compile Include="IOrderSender.cs" />
-    <Compile Include="IPizzaFactory.cs" />
-    <Compile Include="IPrice.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pizza.Abstract\Pizza.Abstract.csproj">
+      <Project>{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}</Project>
+      <Name>Pizza.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pizza\Pizza.csproj">
+      <Project>{F8B6FC21-EB59-45FB-ADD4-B802154BBF82}</Project>
+      <Name>Pizza</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

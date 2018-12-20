@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PizzaExample", "PizzaExampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza.Abstract", "Pizza.Abstract\Pizza.Abstract.csproj", "{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaApp", "PizzaApp\PizzaApp.csproj", "{B59D861C-1F1F-44D6-B4C1-65ED488CA466}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59D861C-1F1F-44D6-B4C1-65ED488CA466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59D861C-1F1F-44D6-B4C1-65ED488CA466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59D861C-1F1F-44D6-B4C1-65ED488CA466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59D861C-1F1F-44D6-B4C1-65ED488CA466}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82} = {47F2656E-5AB6-40D5-B21B-26160BBDACAF}
 		{831F9C7E-6127-43B6-9321-B9CECE7D842C} = {47F2656E-5AB6-40D5-B21B-26160BBDACAF}
 		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94} = {47F2656E-5AB6-40D5-B21B-26160BBDACAF}
+		{B59D861C-1F1F-44D6-B4C1-65ED488CA466} = {47F2656E-5AB6-40D5-B21B-26160BBDACAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A967D0D9-1C0C-4FC6-BA2B-A3B7D73F635B}

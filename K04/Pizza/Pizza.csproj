@@ -43,11 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyPizzaApp.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
+    <Compile Include="PappaJones\MenuItem.cs" />
     <Compile Include="PappaJones\PappaJonesMenu.cs" />
     <Compile Include="PappaJones\PappaJonesOrderCalculator.cs" />
     <Compile Include="PappaJones\PappaJonesPizzaFactory.cs" />
+    <Compile Include="PappaJones\PappaJonesRestApiClient.cs" />
     <Compile Include="Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
