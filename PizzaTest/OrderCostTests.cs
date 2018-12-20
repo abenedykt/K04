@@ -2,6 +2,7 @@
 using Xunit;
 using FluentAssertions;
 using Pizza;
+using PizzaAbstract;
 
 namespace PizzaTest
 {
@@ -62,10 +63,7 @@ namespace PizzaTest
         }
     }
 
-    public interface IPrice
-    {
-        double Value { get; }
-    }
+    
 
     public class Price : IPrice
     {
@@ -74,10 +72,5 @@ namespace PizzaTest
         {
             Value = value;
         }
-    }
-
-    public interface IMenu
-    {
-        IPrice PizzaPrice(string pizzaName);
     }
 }

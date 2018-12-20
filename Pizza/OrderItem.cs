@@ -1,13 +1,8 @@
 ﻿using System;
+using PizzaAbstract;
 
 namespace Pizza
 {
-    public interface IOrderItem
-    {
-        int Pieces { get; }
-        string PizzaName { get; }
-    }
-
     public class OrderItem : IOrderItem
     {
         private string who;

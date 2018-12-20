@@ -1,26 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using PizzaAbstract;
 
 namespace Pizza
 {
-    public interface IOrder
-    {
-        void Add(OrderItem orderItem);
-        bool isVaild();
-        IEnumerable<IOrderItem> Positions { get; }
-    }
-
     public class Order : IOrder
     {
-        List<OrderItem> items;
+        List<IOrderItem> items;
 
         public Order()
         {
-            items = new List<OrderItem>();
+            items = new List<IOrderItem>();
         }
 
-        public void Add(OrderItem orderItem)
+        public void Add(IOrderItem orderItem)
         {
             items.Add(orderItem);
         }
@@ -33,10 +26,10 @@ namespace Pizza
             Dictionary<string, int> hashMap = new Dictionary<string, int>();
             foreach (var item in items)
             {
-                sum += item.howMany;
-                if (hashMap.Keys.Contains(item.which))
-                    hashMap[item.which] += item.howMany;
-                else hashMap[item.which] = item.howMany;
+                sum += item.Pieces;
+                if (hashMap.Keys.Contains(item.PizzaName))
+                    hashMap[item.PizzaName] += item.Pieces;
+                else hashMap[item.PizzaName] = item.Pieces;
             }
 
             bool temp1 = hashMap.All(n => n.Value % 4 == 0);
