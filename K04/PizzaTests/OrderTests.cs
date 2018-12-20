@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using Pizza.Abstract;
+using System.Linq;
 using Xunit;
 
 namespace Pizza
@@ -53,6 +54,22 @@ namespace Pizza
             order.Add(new OrderItem("Mrek", 2, "Hawajska"));
 
             order.IsValid().Should().BeFalse();
+        }
+
+
+        [Fact]
+        public void Positions_returns_list_of_all_added_items()
+        {
+            order.Add(new OrderItem("Arek", 6, "Pepperoni"));
+            order.Add(new OrderItem("Mrek", 2, "Hawajska"));
+
+
+            order.Positions.Count().Should().Be(2);
+            order.Positions.First().PizzaName.Should().Be("Pepperoni");
+            order.Positions.First().Pieces.Should().Be(6);
+
+            order.Positions.Last().PizzaName.Should().Be("Hawajska");
+            order.Positions.Last().Pieces.Should().Be(2);
         }
     }
 }

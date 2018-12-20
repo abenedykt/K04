@@ -73,11 +73,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Example.cs" />
     <Compile Include="NSubstituteExamples.cs" />
     <Compile Include="OrderItemTests.cs" />
     <Compile Include="OrderPriceTests.cs" />
     <Compile Include="OrderTests.cs" />
+    <Compile Include="PizzaFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

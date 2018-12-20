@@ -7,7 +7,6 @@ namespace Pizza
     {
         public OrderItem(string name, int pieces, string pizzaName)
         {
-
             if (pieces <= 0) throw new PiecesMustBeGreatherThanZeroException();
             Pieces = pieces;
             PizzaName = pizzaName;
