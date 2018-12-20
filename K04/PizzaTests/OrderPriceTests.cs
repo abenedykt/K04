@@ -8,29 +8,34 @@ namespace Pizza
     public class OrderPriceTests
     {
         [Fact]
-        public void NewTest()
+        public void Based_on_menu_and_order_final_price_should_be_calculated()
         {
-            // Order
-            // 4 kawałki pepperoni (30 pln za pizze)
-            // 4 kawałki hawajskiej (40 pln za pizze)
-            // 8 kawałki 4 sery (50 za pizze)
-            // 85 
+            IMenu menu = PrepareTestMenu();
+            IOrder order = PrepareTestOrder();
 
-            var menu = Substitute.For<IMenu>();
-            menu.PizzaPrice("Pepperoni").Returns(new Price(30));
-            menu.PizzaPrice("Hawajska").Returns(new Price(40));
-            menu.PizzaPrice("4 Sery").Returns(new Price(50));
+            var calculator = new OrderCalculator(menu);
+            var price = calculator.Calculate(order);
+            price.Value.Should().Be(85);
+        }
 
-            var order = Substitute.For<IOrder>();
+        private IOrder PrepareTestOrder()
+        {
+            IOrder order = Substitute.For<IOrder>();
             order.Positions.Returns(new[]{
                 new OrderItem("Jan", 4, "Pepperoni"),
                 new OrderItem("Mateusz", 4, "Hawajska"),
                 new OrderItem("Marek", 8, "4 Sery"),
             });
+            return order;
+        }
 
-            var calculator = new OrderCalculator(menu);
-            var price = calculator.Calculate(order);
-            price.Value.Should().Be(85);
+        private IMenu PrepareTestMenu()
+        {
+            var menu = Substitute.For<IMenu>();
+            menu.PizzaPrice("Pepperoni").Returns(new Price(30));
+            menu.PizzaPrice("Hawajska").Returns(new Price(40));
+            menu.PizzaPrice("4 Sery").Returns(new Price(50));
+            return menu;
         }
     }
 }
