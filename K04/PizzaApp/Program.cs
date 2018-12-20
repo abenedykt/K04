@@ -11,7 +11,8 @@ namespace PizzaApp
         static void Main(string[] args)
         {
             var factory = new PappaJonesPizzaFactory();
-            var app = new MyPizzaApp(factory);
+            var orderRepository = new OrdersRepository();
+            var app = new MyPizzaApp(factory, orderRepository);
 
             var menu = app.GetMenu();
             Show(menu);

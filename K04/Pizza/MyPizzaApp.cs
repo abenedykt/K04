@@ -1,17 +1,17 @@
 ﻿using Pizza.Abstract;
 using System;
-using System.Collections.Generic;
 
 namespace Pizza
 {
     public class MyPizzaApp
     {
         private readonly IPizzaFactory _factory;
-        private readonly IDictionary<string, IOrder> _orders = new Dictionary<string, IOrder>();
+        private readonly IOrdersRepository _orders;
 
-        public MyPizzaApp(IPizzaFactory factory)
+        public MyPizzaApp(IPizzaFactory factory, IOrdersRepository ordersRepository)
         {
             _factory = factory;
+            _orders = ordersRepository;
         }
 
         public IMenu GetMenu()
@@ -29,11 +29,11 @@ namespace Pizza
 
         public void AddToOrder(IClientOrder order, IMenuItem menuItem, int pieces)
         {
-            _orders[order.Value].Add(new OrderItem("", pieces, menuItem.Name));
+            _orders.Find(order.Value).Add(new OrderItem("", pieces, menuItem.Name));
         }
         public void SendOrder(IClientOrder clientOrder)
         {
-            var order = _orders[clientOrder.Value];
+            var order = _orders.Find(clientOrder.Value);
 
             if (order.IsValid())
             {
@@ -43,7 +43,6 @@ namespace Pizza
             {
                 throw new OrderIsNotValidException();
             }
-
         }
 
         internal class OrderIsNotValidException : Exception
