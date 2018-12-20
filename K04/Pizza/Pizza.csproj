@@ -62,10 +62,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOrder.cs" />
-    <Compile Include="IOrderItem.cs" />
     <Compile Include="Order.cs" />
+    <Compile Include="OrderCalculator.cs" />
     <Compile Include="OrderItem.cs" />
+    <Compile Include="Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pizza.Abstract\Pizza.Abstract.csproj">
+      <Project>{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}</Project>
+      <Name>Pizza.Abstract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,11 +1,12 @@
 ﻿using FluentAssertions;
+using Pizza.Abstract;
 using Xunit;
 
 namespace Pizza
 {
     public class PizzaTests
     {
-        private Order order;
+        private IOrder order;
 
         public PizzaTests()
         {

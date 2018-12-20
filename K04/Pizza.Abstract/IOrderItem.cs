@@ -1,4 +1,4 @@
-﻿namespace Pizza
+﻿namespace Pizza.Abstract
 {
     public interface IOrderItem
     {

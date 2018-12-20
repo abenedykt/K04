@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace Pizza
+namespace Pizza.Abstract
 {
     public interface IOrder
     {
-        void Add(OrderItem orderItem);
+        void Add(IOrderItem orderItem);
         bool IsValid();
         IEnumerable<IOrderItem> Positions { get; }
     }

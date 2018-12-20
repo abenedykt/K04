@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza", "Pizza\Pizza.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaTests", "PizzaTests\PizzaTests.csproj", "{831F9C7E-6127-43B6-9321-B9CECE7D842C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PizzaExample", "PizzaExample", "{47F2656E-5AB6-40D5-B21B-26160BBDACAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza.Abstract", "Pizza.Abstract\Pizza.Abstract.csproj", "{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,18 @@ Global
 		{831F9C7E-6127-43B6-9321-B9CECE7D842C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{831F9C7E-6127-43B6-9321-B9CECE7D842C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{831F9C7E-6127-43B6-9321-B9CECE7D842C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8B6FC21-EB59-45FB-ADD4-B802154BBF82} = {47F2656E-5AB6-40D5-B21B-26160BBDACAF}
+		{831F9C7E-6127-43B6-9321-B9CECE7D842C} = {47F2656E-5AB6-40D5-B21B-26160BBDACAF}
+		{DA5D2ADB-9673-456F-A1F9-85AACFBCDF94} = {47F2656E-5AB6-40D5-B21B-26160BBDACAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A967D0D9-1C0C-4FC6-BA2B-A3B7D73F635B}

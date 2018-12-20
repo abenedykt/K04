@@ -1,21 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using Pizza.Abstract;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Pizza
 {
     public class Order : IOrder
     {
-        private readonly List<OrderItem> _items;
+        private readonly List<IOrderItem> _items;
 
         public Order()
         {
-            _items = new List<OrderItem>();
+            _items = new List<IOrderItem>();
 
         }
 
         public IEnumerable<IOrderItem> Positions => _items;
 
-        public void Add(OrderItem orderItem)
+        public void Add(IOrderItem orderItem)
         {
             _items.Add(orderItem);
         }
