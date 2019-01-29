@@ -5,11 +5,11 @@ namespace Pizza
 {
     internal class CommandExecutor
     {
-        internal TResult Execute<TResult>(CommandBase<TResult> command)
+        internal TResult Execute<TParam, TResult>(CommandBase<TParam, TResult> command, TParam param)
         {
             try
             {
-                return command.Execute();
+                return command.Execute(param);
             }
             catch (Exception e)
             {

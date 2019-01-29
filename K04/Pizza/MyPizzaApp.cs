@@ -13,29 +13,27 @@ namespace Pizza
         {
             _factory = factory;
             _orders = ordersRepository;
-
-
             _executor = new CommandExecutor();
         }
 
         public IMenu GetMenu()
         {
-            return _executor.Execute(new CommandGetMenu(_factory));
+            return _executor.Execute(new CommandGetMenu(_factory), null);
         }
 
         public IClientOrder StartOrder()
         {
-            return _executor.Execute(new CommandStartNewOrder(_orders));
-
-            
+            return _executor.Execute(new CommandStartNewOrder(_orders), null);
         }
 
         public void AddToOrder(IClientOrder order, IMenuItem menuItem, int pieces)
         {
-            _orders.Find(order.Value).Add(new OrderItem("", pieces, menuItem.Name));
+            _executor.Execute(new CommandAddToOrder(_orders), new AddToOrderParam(order.Value, new OrderItem("", pieces, menuItem.Name)));
         }
         public void SendOrder(IClientOrder clientOrder)
         {
+            // todo to command
+
             var order = _orders.Find(clientOrder.Value);
 
             if (order.IsValid())
@@ -63,4 +61,5 @@ namespace Pizza
             }
         }
     }
+
 }

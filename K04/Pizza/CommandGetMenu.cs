@@ -2,7 +2,7 @@
 
 namespace Pizza
 {
-    public class CommandGetMenu : CommandBase<IMenu>
+    public class CommandGetMenu : CommandBase<object, IMenu>
     {
         private readonly IPizzaFactory _factory;
 
@@ -11,7 +11,7 @@ namespace Pizza
             _factory = factory;
         }
 
-        public override IMenu Execute()
+        public override IMenu Execute(object param)
         {
             return _factory.Menu();
         }

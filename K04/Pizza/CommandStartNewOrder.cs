@@ -4,7 +4,7 @@ using static Pizza.MyPizzaApp;
 
 namespace Pizza
 {
-    internal class CommandStartNewOrder : CommandBase<IClientOrder>
+    internal class CommandStartNewOrder : CommandBase<object, IClientOrder>
     {
         private IOrdersRepository _orders;
 
@@ -13,7 +13,7 @@ namespace Pizza
             _orders = orders;
         }
 
-        public override IClientOrder Execute()
+        public override IClientOrder Execute(object param)
         {
             var clientOrder = new ClientOrder(Guid.NewGuid().ToString()); ;
             _orders.Add(clientOrder.Value, new Order());

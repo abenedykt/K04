@@ -1,8 +1,7 @@
 ﻿namespace Pizza
 {
-    public abstract class CommandBase<TResult>
+    public abstract class CommandBase<TParam, TResult>
     {
-
-        public abstract TResult Execute();
+        public abstract TResult Execute(TParam param);
     }
 }
