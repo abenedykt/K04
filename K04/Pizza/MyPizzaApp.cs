@@ -1,5 +1,6 @@
 ﻿using Pizza.Abstract;
 using System;
+using System.Diagnostics;
 
 namespace Pizza
 {
@@ -7,16 +8,20 @@ namespace Pizza
     {
         private readonly IPizzaFactory _factory;
         private readonly IOrdersRepository _orders;
+        private CommandExecutor _executor;
 
         public MyPizzaApp(IPizzaFactory factory, IOrdersRepository ordersRepository)
         {
             _factory = factory;
             _orders = ordersRepository;
+
+
+            _executor = new CommandExecutor();
         }
 
         public IMenu GetMenu()
         {
-            return _factory.Menu();
+            return (IMenu)_executor.Execute(new CommandGetMenu(_factory));
         }
 
         public IClientOrder StartOrder()
@@ -58,6 +63,24 @@ namespace Pizza
             {
                 Value = guid;
             }
+        }
+    }
+
+    internal class CommandExecutor
+    {
+        internal object Execute(CommandBase command)
+        {
+            try
+            {
+                return command.Execute();
+            }
+            catch (Exception e)
+            {
+                Trace.WriteLine(e.Message);
+            }
+
+            return null;
+            
         }
     }
 }
