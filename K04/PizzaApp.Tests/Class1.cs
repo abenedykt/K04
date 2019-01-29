@@ -7,10 +7,10 @@ using Xunit;
 
 namespace PizzaApp.Tests
 {
-    public class Class1
+    public class PizzaApp_Test
     {
         [Fact]
-        public void IntegrationTest()
+        public void Can_Count_Order()
         {
             var factory = Substitute.For<IPizzaFactory>();
             var fakeSender = Substitute.For<IOrderSender>();

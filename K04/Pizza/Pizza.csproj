@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMyPizzaApp.cs" />
     <Compile Include="IOrdersRepository.cs" />
     <Compile Include="MyPizzaApp.cs" />
     <Compile Include="Order.cs" />
