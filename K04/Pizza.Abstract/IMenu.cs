@@ -8,5 +8,4 @@ namespace Pizza.Abstract
 
         IPrice PizzaPrice(string pizzaName);
     }
-
 }

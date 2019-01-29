@@ -1,6 +1,5 @@
 ﻿using Pizza.Abstract;
 using System;
-using System.Diagnostics;
 
 namespace Pizza
 {
@@ -21,7 +20,7 @@ namespace Pizza
 
         public IMenu GetMenu()
         {
-            return (IMenu)_executor.Execute(new CommandGetMenu(_factory));
+            return _executor.Execute(new CommandGetMenu(_factory));
         }
 
         public IClientOrder StartOrder()
@@ -63,24 +62,6 @@ namespace Pizza
             {
                 Value = guid;
             }
-        }
-    }
-
-    internal class CommandExecutor
-    {
-        internal object Execute(CommandBase command)
-        {
-            try
-            {
-                return command.Execute();
-            }
-            catch (Exception e)
-            {
-                Trace.WriteLine(e.Message);
-            }
-
-            return null;
-            
         }
     }
 }
