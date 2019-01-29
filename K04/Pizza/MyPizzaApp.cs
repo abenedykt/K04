@@ -26,6 +26,8 @@ namespace Pizza
         public IClientOrder StartOrder()
         {
             return _executor.Execute(new CommandStartNewOrder(_orders));
+
+            
         }
 
         public void AddToOrder(IClientOrder order, IMenuItem menuItem, int pieces)

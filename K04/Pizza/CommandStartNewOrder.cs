@@ -1,5 +1,6 @@
 ﻿using Pizza.Abstract;
 using System;
+using static Pizza.MyPizzaApp;
 
 namespace Pizza
 {
@@ -14,7 +15,7 @@ namespace Pizza
 
         public override IClientOrder Execute()
         {
-            var clientOrder = new MyPizzaApp.ClientOrder(Guid.NewGuid().ToString()); ;
+            var clientOrder = new ClientOrder(Guid.NewGuid().ToString()); ;
             _orders.Add(clientOrder.Value, new Order());
 
             return clientOrder;
