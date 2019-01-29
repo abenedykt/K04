@@ -3,7 +3,7 @@ using System;
 
 namespace Pizza
 {
-    public class MyPizzaApp
+    public class MyPizzaApp : IMyPizzaApp
     {
         private readonly IPizzaFactory _factory;
         private readonly IOrdersRepository _orders;
