@@ -7,13 +7,13 @@ namespace Pizza
     {
         private readonly IPizzaFactory _factory;
         private readonly IOrdersRepository _orders;
-        private CommandExecutor<IMenu> _executor;
+        private readonly CommandExecutor _executor;
 
         public MyPizzaApp(IPizzaFactory factory, IOrdersRepository ordersRepository)
         {
             _factory = factory;
             _orders = ordersRepository;
-            _executor = new CommandExecutor<IMenu>();
+            _executor = new CommandExecutor();
         }
 
         public IMenu GetMenu()
@@ -23,10 +23,7 @@ namespace Pizza
 
         public IClientOrder StartOrder()
         {
-            var clientOrder = new ClientOrder(Guid.NewGuid().ToString()); ;
-            _orders.Add(clientOrder.Value, new Order());
-
-            return clientOrder;
+            return _executor.Execute(new CommandStartNewOrder(_orders));
         }
 
         public void AddToOrder(IClientOrder order, IMenuItem menuItem, int pieces)

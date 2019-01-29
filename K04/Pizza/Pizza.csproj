@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="CommandExecutor.cs" />
     <Compile Include="CommandGetMenu.cs" />
+    <Compile Include="CommandStartNewOrder.cs" />
     <Compile Include="IMyPizzaApp.cs" />
     <Compile Include="IOrdersRepository.cs" />
     <Compile Include="MyPizzaApp.cs" />

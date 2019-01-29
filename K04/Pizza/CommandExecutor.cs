@@ -3,9 +3,9 @@ using System.Diagnostics;
 
 namespace Pizza
 {
-    internal class CommandExecutor<T>
+    internal class CommandExecutor
     {
-        internal T Execute(CommandBase<T> command)
+        internal T Execute<T>(CommandBase<T> command)
         {
             try
             {
