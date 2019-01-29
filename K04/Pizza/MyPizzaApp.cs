@@ -25,10 +25,7 @@ namespace Pizza
 
         public IClientOrder StartOrder()
         {
-            var clientOrder = new ClientOrder(Guid.NewGuid().ToString()); ;
-            _orders.Add(clientOrder.Value, new Order());
-
-            return clientOrder;
+            return _executor.Execute(new CommandStartNewOrder(_orders));
         }
 
         public void AddToOrder(IClientOrder order, IMenuItem menuItem, int pieces)
