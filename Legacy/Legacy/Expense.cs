@@ -1,6 +1,6 @@
 ﻿namespace TDD.Legacy
 {
-    public class Expense
+    public class Expense : IExpense
     {
         public string DateTime { get; set; }
         public string Description { get; set; }

@@ -1,16 +1,16 @@
-﻿using NSubstitute;
+﻿using System.Linq;
+using NSubstitute;
 using Pizza;
 using Pizza.Abstract;
 using Pizza.PappaJones;
-using System.Linq;
 using Xunit;
 
 namespace PizzaApp.Tests
 {
-    public class Class1
+    public class IntegrationTests
     {
         [Fact]
-        public void IntegrationTest()
+        public void Can_send_two_separate_orders()
         {
             var factory = Substitute.For<IPizzaFactory>();
             var fakeSender = Substitute.For<IOrderSender>();

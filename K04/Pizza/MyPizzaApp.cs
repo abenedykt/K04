@@ -1,22 +1,24 @@
-﻿using Pizza.Abstract;
-using System;
+﻿using System;
+using Pizza.Abstract;
 
 namespace Pizza
 {
-    public class MyPizzaApp
+    public class MyPizzaApp : IMyPizzaApp
     {
         private readonly IPizzaFactory _factory;
         private readonly IOrdersRepository _orders;
+        private CommandExecutor<IMenu> _executor;
 
         public MyPizzaApp(IPizzaFactory factory, IOrdersRepository ordersRepository)
         {
             _factory = factory;
             _orders = ordersRepository;
+            _executor = new CommandExecutor<IMenu>();
         }
 
         public IMenu GetMenu()
         {
-            return _factory.Menu();
+            return _executor.Execute(new CommandGetMenu(_factory));
         }
 
         public IClientOrder StartOrder()

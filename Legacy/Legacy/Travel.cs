@@ -2,9 +2,9 @@
 
 namespace TDD.Legacy
 {
-    public class Travel
+    public class Travel : ITravel
     {
-        public Person Person { get; set; }
-        public List<Expense> Expenses { get; set; }
+        public IPerson Person { get; set; }
+        public IList<IExpense> Expenses { get; set; }
     }
 }

@@ -1,8 +1,8 @@
-﻿using Pizza;
+﻿using System;
+using System.Linq;
+using Pizza;
 using Pizza.Abstract;
 using Pizza.PappaJones;
-using System;
-using System.Linq;
 
 namespace PizzaApp
 {
@@ -29,6 +29,8 @@ namespace PizzaApp
             app.AddToOrder(order2, menu.Positions.Last(), 8);
 
             app.SendOrder(order2);
+            Console.ReadKey();
+
         }
 
         private static void Show(IMenu menu)
@@ -37,6 +39,7 @@ namespace PizzaApp
             {
                 Console.WriteLine($"{p.Name} {p.Price.Value}");
             }
+
         }
     }
 }
